@@ -7,6 +7,10 @@ from fbprophet import Prophet
 from fbprophet.plot import plot_plotly
 from plotly import graph_objs as go
 
+st.set_page_config(
+page_title = "Stock Trend Prediction",
+page_icon = "📈"
+)
 st.title('Stock Trend Prediction')
 hide_footer_style = """
 <style>
@@ -14,10 +18,6 @@ footer {visibility: hidden!important;}
 footer:after {content: "Made by Ritik Sharma"; visibility: visible; display: block; color: white; font-size:1em;}
 """
 st.markdown(hide_footer_style, unsafe_allow_html=True)
-st.set_page_config(
-title = "Stock Trend Prediction"
-favicon = "📈"
-)
 
 stocks = ['AAPL - Apple Inc. Common Stock', 'ZS - Zscaler Inc. Common Stock', 'GOOGL - Alphabet Inc. Class A Common Stock', 'MSFT - Microsoft Corporation Common Stock']
 with open("tickers.csv") as f:
