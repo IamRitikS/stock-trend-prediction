@@ -15,7 +15,7 @@ st.title('Stock Trend Prediction')
 hide_footer_style = """
 <style>
 #MainMenu { display: none; }
-div[class^='viewerBadge'] { display: none!important; }
+.viewerBadge_link__1S137 { display: none!important; }
 footer {visibility: hidden!important;}
 footer:after {content: "Made by Ritik Sharma"; visibility: visible; display: block; color: white; font-size:1em;}
 """
