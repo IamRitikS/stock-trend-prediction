@@ -6,6 +6,7 @@ import yfinance as yf
 from fbprophet import Prophet
 from fbprophet.plot import plot_plotly
 from plotly import graph_objs as go
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 
 st.set_page_config(
 page_title = "Stock Trend Prediction",
@@ -87,3 +88,10 @@ st.plotly_chart(fig1)
 st.write("Forecast components")
 fig2 = m.plot_components(forecast)
 st.write(fig2)
+
+
+dataToCompare = data[['Close']]
+forecastToCompare = forecast.iloc[:dataToCompare.shape[0],:]
+forecastToCompare = forecastToCompare[['yhat']]
+st.success("Model was able to predict values with regression score of upto "+str(r2_score(dataToCompare, forecastToCompare)))
+# print(r2_score(dataToCompare, forecastToCompare))
