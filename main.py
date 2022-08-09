@@ -18,7 +18,7 @@ hide_footer_style = """
 #MainMenu { display: none; }
 .viewerBadge_link__1S137 { display: none!important; }
 footer {visibility: hidden!important;}
-footer:after {content: "Made by Ritik Sharma"; visibility: visible; display: block; color: white; font-size:1em;}
+footer:after {content: "Made by Ritik Sharma and Priya Devi"; visibility: visible; display: block; color: white; font-size:1em;}
 """
 st.markdown(hide_footer_style, unsafe_allow_html=True)
 
